@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Interactive Search Quickstart - Azure Maps Web SDK Samples</title>
+    <title>Azure Maps Test</title>
 
     <meta charset="utf-8" />
 	<link rel="shortcut icon" href="/favicon.ico"/>
@@ -39,18 +39,18 @@
                 //Add authentication details for connecting to Azure Maps.
                 authOptions: {
                     //Use Azure Active Directory authentication.
-                    authType: 'anonymous',
-                    clientId: 'e6b6ab59-eb5d-4d25-aa57-581135b927f0', //Your Azure Maps client id for accessing your Azure Maps account.
-                    getToken: function (resolve, reject, map) {
-                        //URL to your authentication service that retrieves an Azure Active Directory Token.
-                        var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+                    // authType: 'anonymous',
+                    // clientId: 'e6b6ab59-eb5d-4d25-aa57-581135b927f0', //Your Azure Maps client id for accessing your Azure Maps account.
+                    // getToken: function (resolve, reject, map) {
+                    //     //URL to your authentication service that retrieves an Azure Active Directory Token.
+                    //     var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
 
-                        fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
-                    }
+                    //     fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                    // }
 
                     //Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps. NOTE: The primary key should be used as the key.
-                    //authType: 'subscriptionKey',
-                    //subscriptionKey: '[YOUR_AZURE_MAPS_KEY]'
+                    authType: 'subscriptionKey',
+                    subscriptionKey: 'pE3JNp9rjGQB2s7H8KM-Jqi2WNk9-t5oD3JnHWZoaW8'
                 }
             });
 
